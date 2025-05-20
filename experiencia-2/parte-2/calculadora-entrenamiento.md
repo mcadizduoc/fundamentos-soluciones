@@ -174,7 +174,7 @@ if calcular_peso_ideal == 1:
         if acumulador_peso == 70: # Si alcanzamos el peso ideal, detenemos el while
             calculando_dias = False
         
-print(f"Para alcanzar tu peso ideal, debes seguir la rutina por alrededor de {contador_semanas * 7} días")
+    print(f"Para alcanzar tu peso ideal, debes seguir la rutina por alrededor de {contador_semanas * 7} días")
 ```
 
 ### Código completo (Sólo resolución del problema)
