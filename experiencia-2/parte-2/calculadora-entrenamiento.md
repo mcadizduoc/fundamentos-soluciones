@@ -44,7 +44,7 @@ dif_peso = (peso - 70) // 10 # división entera según supuesto
 
 if dif_peso > 0: # Peso por sobre los 70 kilos
     calorias_base -= 100 * dif_peso
-elif dif_peso > 0: # Peso por debajo de los 70 kilos
+elif dif_peso < 0: # Peso por debajo de los 70 kilos
     calorias_base += 100 * dif_peso
 
 # Listos los ajustes, ahora calculamos la diferencia de calorías
