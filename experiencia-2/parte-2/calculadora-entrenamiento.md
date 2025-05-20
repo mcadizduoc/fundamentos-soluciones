@@ -334,3 +334,8 @@ if calcular_peso_ideal == 1:
         
     print(f"Para alcanzar tu peso ideal, debes seguir la rutina por alrededor de {contador_semanas * 7} días")
 ```
+
+## Validando la información
+
+Si bien el código anterior resuelve el problema, está suceptible a fallos debido a que no estamos validando los tipos de dato que ingresa el usuario a sus respectivas variables.
+Podemos validar utilizando try...except al inicio del programa
