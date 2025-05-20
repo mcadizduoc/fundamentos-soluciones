@@ -61,3 +61,86 @@ else:
 Es importante notar que se hace un supuesto en este ejercicio, el cual considera que a través de la división entera de 10 en la diferencia de pesos, ajustamos +100 o -100 calorías.
 Esto quiere decir que si el usuario está 9 kilos por sobre el peso ideal, no cuenta. Al igual que si el usuario está 19 kilos por debajo, entonces solo cuenta los primeros 10 kilos, los otros 9 no cuentan.
 
+### Ahora el plan de entrenamiento
+
+Es importante que para este caso también tenemos supuestos, acá vamos a suponer los ejercicios que vamos a asignar (aeróbicos o de peso) y de cómo los distribuiremos por díam, de forma estática. Agregando al final esta parte del código
+
+```python
+for i in range(5): # Plan de 5 días
+    ejercicio = ""
+    series = 0
+    repeticiones = 0
+    minutos = 0
+    if dif_calorias > 0:
+        if i == 0:
+            ejercicio = "curl de biceps"
+            series = 3
+            repeticiones = 8
+        elif i == 1:
+            ejercicio = "press banca"
+            series = 4
+            repeticiones = 6
+        elif i == 2:
+            ejercicio = "sentadillas con barra"
+            series = 4
+            repeticiones = 8
+        elif i == 3:
+            ejercicio = "face pulls"
+            series = 4
+            repeticiones = 14
+        elif i == 4:
+            ejercicio = "elevación de talones"
+            series = 4
+            repeticiones = 10
+    elif dif_calorias < 0:
+        if i == 0:
+            ejercicio = "caminata"
+            series = 1
+            minutos = 30
+        elif i == 1:
+            ejercicio = "trote"
+            series = 1
+            minutos = 20
+        elif i == 2:
+            ejercicio = "sentadilla sin peso"
+            series = 4
+            repeticiones = 14 
+        elif i == 3:
+            ejercicio = "jumping jacks"
+            series = 4
+            repeticiones = 12
+        elif i == 4:
+            ejercicio = "burpees"
+            series = 4
+            repeticiones = 8
+    else:
+        if i == 0:
+            ejercicio = "mancuernas"
+            series = 4
+            repeticiones = 6
+        elif i == 1:
+            ejercicio = "trote"
+            series = 1
+            minutos = 20 
+        elif i == 2:
+            ejercicio = "sentadillas con barra"
+            series = 3
+            repeticiones = 12
+        elif i == 3:
+            ejercicio = "jumping jacks"
+            series = 3
+            minutos = 1.5
+        elif i == 4:
+            ejercicio = "elevación de talones"
+            series = 3
+            repeticiones = 10
+    
+    mensaje_rutina = f"Para el día {i + 1} debes hacer { series } series del {ejercicio}"
+    if repeticiones > 0:
+        mensaje_rutina = f"{mensaje_rutina} x {repeticiones} repeticiones"
+    elif minutos > 0:
+        mensaje_rutina = f"{mensaje_rutina} por {minutos} minutos"
+    
+    print(mensaje_rutina)
+```
+
